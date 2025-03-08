@@ -9,7 +9,7 @@ import numpy as np
 app = FastAPI()
 
 # Load your YOLOv5 model (update path if needed)
-model = torch.hub.load('ultralytics/yolov5', 'custom', path='./models/skin_conditions_model.pt')
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='./models/best.pt')
 model.eval()
 
 class PredictionResponse(BaseModel):
