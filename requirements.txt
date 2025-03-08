@@ -3,4 +3,4 @@ uvicorn
 torch
 pillow
 numpy
-cv2
+opencv-python
