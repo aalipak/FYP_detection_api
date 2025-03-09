@@ -7,7 +7,9 @@ from pathlib import Path
 import numpy as np
 
 app = FastAPI()
-
+@app.get("/")
+def read_root():
+    return {"message": "Hello, Vercel!"}
 # Load your YOLOv5 model (update path if needed)
 model = torch.hub.load('ultralytics/yolov5', 'custom', path='./models/best.pt')
 model.eval()
